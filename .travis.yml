@@ -1,21 +1,23 @@
 language: php
 
-php:
-  - 5.4
-  - 5.5
-  - 5.6
-  - hhvm
-
-before_install:
-    - sudo apt-get update > /dev/null
+sudo: false
 
 matrix:
-    allow_failures:
-        php: hhvm
+    include:
+        - php: 5.4
+          env:
+              - DEPENDENCIES='low'
+        - php: 5.5
+        - php: 5.6
+        - php: 7.0
+
+before_script:
+    - phpenv config-rm xdebug.ini
+    - composer self-update
+    - if [[ !$DEPENDENCIES ]]; then composer update -n --prefer-source; fi;
+    - if [[ "$DEPENDENCIES" == "low" ]]; then composer update --prefer-lowest -n --prefer-source; fi;
 
 script:
-    - composer self-update
-    - composer update -n
     - ./bin/phpspec run -f pretty
     - ./bin/behat --no-snippets --no-paths --verbose --format=progress
 

@@ -11,40 +11,40 @@
         }
     ],
     "require": {
-        "php": ">=5.3.3",
-        "doctrine/orm": "~2.3",
+        "php": ">=5.4",
+        "doctrine/orm": "^2.3",
         "doctrine/doctrine-bundle": "dev-master",
-        "symfony/framework-bundle": "~2.3",
-        "symfony/twig-bundle": "~2.3",
-        "egeloen/ckeditor-bundle": "~2.0",
-        "fsi/admin-bundle" : "1.1.x-dev",
+        "symfony/framework-bundle": "^2.3",
+        "symfony/twig-bundle": "^2.3",
+        "egeloen/ckeditor-bundle": "^2.0",
+        "fsi/admin-bundle" : "~1.1@dev",
         "fsi/gallery-bundle": "1.1.*"
     },
     "require-dev": {
-        "fzaninotto/faker": "v1.3.0",
-        "symfony/validator": "~2.3",
-        "phpspec/phpspec": "2.0.*@dev",
-        "behat/behat": "~2.4",
-        "behat/symfony2-extension": "~1.1",
-        "behat/mink": "1.5.*",
-        "behat/mink-extension": "*",
-        "behat/mink-browserkit-driver": "*",
-        "behat/mink-selenium2-driver": "*",
-        "sensiolabs/behat-page-object-extension": "1.0.*",
-        "bossa/phpspec2-expect": "dev-master"
+        "fzaninotto/faker": "^1.3",
+        "symfony/validator": "^2.3",
+        "phpspec/phpspec": "^2.4",
+        "behat/behat": "^2.4",
+        "behat/symfony2-extension": "^1.1",
+        "behat/mink": "^1.7",
+        "behat/mink-extension": "^1.3",
+        "behat/mink-browserkit-driver": "^1.3",
+        "behat/mink-selenium2-driver": "^1.3",
+        "sensiolabs/behat-page-object-extension": "^1.0",
+        "bossa/phpspec2-expect": "^1.0"
     },
     "config": {
         "bin-dir": "bin"
     },
     "autoload": {
-        "psr-0": {
+        "psr-4": {
             "FSi\\Bundle\\AdminGalleryBundle\\": ""
         }
     },
     "target-dir" : "FSi/Bundle/AdminGalleryBundle",
     "extra": {
         "branch-alias": {
-            "dev-master": "1.1-dev"
+            "dev-master": "2.0.x-dev"
         }
     }
 }
