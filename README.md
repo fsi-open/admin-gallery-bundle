@@ -1,4 +1,8 @@
-#FSiAdminGalleryBundle
+# THIS PACKAGE IS DEPRECATED
+
+Do not use this package, as it will not receive any updates and may be deleted in the future.
+
+# FSiAdminGalleryBundle
 
 This bundle provide FSiAdminBundle configuration for FSiGalleryBundle.
 
